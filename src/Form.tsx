@@ -234,6 +234,7 @@ class Form extends Component<IProps, unknown> {
     };
 }
 type TSendHandler = (name: string, props: THostProps, clear: () => void) => void;
+type TUpdatesHandler = TStateListener<THostProps>;
 
 interface IProps extends HTMLAttributes<HTMLFormElement> {
     // unique form name
@@ -250,7 +251,7 @@ interface IProps extends HTMLAttributes<HTMLFormElement> {
     onNativeSubmit?: (e: FormEvent) => void;
     onNativeReset?: (e: FormEvent) => void;
 
-    onUpdates?: TStateListener<THostProps>;
+    onUpdates?: TUpdatesHandler;
     onSend?: TSendHandler;
     onReset?: () => void;
 
@@ -259,4 +260,4 @@ interface IProps extends HTMLAttributes<HTMLFormElement> {
 }
 
 export default Form;
-export { IProps, TEventName, events, TSendHandler };
+export { IProps, TEventName, events, TSendHandler, TUpdatesHandler };

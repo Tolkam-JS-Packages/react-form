@@ -1,4 +1,4 @@
-export { default as Form, IProps as IFormProps, TSendHandler } from './src/Form';
+export { default as Form, IProps as IFormProps, TSendHandler, TUpdatesHandler } from './src/Form';
 export { IProps as IListenerProps, IListeningChild, IListeningChildState } from './src/Listener';
 export { IProps as IUpdaterProps, IUpdatingChild, IUpdatingChildActions } from './src/Updater';
 export { default as AbstractField } from './src/fields/AbstractField';
